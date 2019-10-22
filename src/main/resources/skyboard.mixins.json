@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "com.destillegast.skyboard.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "IPlayerListHud",
+    "SkyRenderMixin",
+    "GameMenuScreenMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

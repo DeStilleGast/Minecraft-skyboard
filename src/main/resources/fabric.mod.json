@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "skyboard",
+  "version": "1.0.0",
+
+  "name": "Skyboard",
+  "description": "Renders a scoreboard in the sky!",
+  "authors": [
+    "DeStilleGast"
+  ],
+  "contact": {
+    "homepage": "https://github.com/DeStilleGast/",
+    "sources": "https://github.com/DeStilleGast/Skyboard"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.destillegast.skyboard.Loader"
+    ],
+    "modmenu": [
+      "com.destillegast.skyboard.ModMenuLoader"
+    ]
+  },
+  "mixins": [
+    "skyboard.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "cloth-config2": "1.3"
+  },
+  "custom": {
+    "modmenu:clientsideOnly": true
+  }
+}
