@@ -10,7 +10,8 @@
   ],
   "contact": {
     "homepage": "https://github.com/DeStilleGast/",
-    "sources": "https://github.com/DeStilleGast/Skyboard"
+    "sources": "https://github.com/DeStilleGast/Minecraft-skyboard",
+    "issues": "https://github.com/DeStilleGast/Minecraft-skyboard/issues"
   },
 
   "license": "CC0-1.0",

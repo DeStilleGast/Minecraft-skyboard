@@ -47,7 +47,7 @@ public class Loader implements ClientModInitializer {
         scrolling.addEntry(entryBuilder.startEnumSelector("Spectator names names", EnumSpectatorNames.class, c.specatorNames).setSaveConsumer(e -> c.specatorNames = e).build());
 
         skyboardDrawSettings.addEntry(entryBuilder.startEnumSelector("Display skyboard in this direction", EnumSide.class, c.displaySide).setSaveConsumer(e -> c.displaySide = e).build());
-        skyboardDrawSettings.addEntry(entryBuilder.startIntSlider("Fade back delay", c.skyboardFadeBackDelay, 500, 8000).setSaveConsumer(i -> c.skyboardFadeBackDelay = i).setTextGetter(i -> i + " MS / " + i.toString().charAt(0) + " Sec").setTooltip("This has only effect if", "skyboard direction is set on \"" + EnumSide.PLAYERFACING + "\"").build());
+        skyboardDrawSettings.addEntry(entryBuilder.startIntSlider("Fade back delay", c.skyboardFadeBackDelay, 0, 8000).setSaveConsumer(i -> c.skyboardFadeBackDelay = i).setTextGetter(i -> i + " MS / " + i.toString().charAt(0) + " Sec").setTooltip("This has only effect if", "skyboard direction is set on \"" + EnumSide.PLAYERFACING + "\"").build());
         skyboardDrawSettings.addEntry(entryBuilder.startIntSlider("Animation speed", (int) (c.skyboardFadeAnimationSpeed * 10), 10, 100).setSaveConsumer(i -> c.skyboardFadeAnimationSpeed = i / 10F).setTextGetter(i -> "x" + i / 10F).build());
         skyboardDrawSettings.addEntry(entryBuilder.startIntSlider("Draw distance", c.skyboardDistanceDrawing, 50, 125).setSaveConsumer(d -> c.skyboardDistanceDrawing = d).build());
         skyboardDrawSettings.addEntry(entryBuilder.startIntSlider("Draw height", c.skyboardHeightDrawing, 0, 100).setSaveConsumer(d -> c.skyboardHeightDrawing = d).build());
