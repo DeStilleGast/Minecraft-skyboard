@@ -211,6 +211,9 @@ public class SkyTablistRenderer extends DrawableHelper {
         int footerHeaderLines;
         int rowX;
 
+        // flikker fix
+        GlStateManager.disableDepthTest();
+
         // HEADER
         if (headerText != null) {
             footerHeaderLeft = scaledWidth / 2 - headerWidth / 2 - 1;
@@ -228,9 +231,6 @@ public class SkyTablistRenderer extends DrawableHelper {
 
             ++headerMaxHeight;
         }
-
-        // flikker fix
-        GlStateManager.disableDepthTest();
 
         GlStateManager.pushMatrix();
         GlStateManager.translatef(0, 0, 1);
